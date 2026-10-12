@@ -1,0 +1,24 @@
+b{% extends 'book/main.html' %}
+{% block content %}
+
+<div class="container mt-4">
+    <h1>Books</h1>
+    
+    <div class="row">
+        {% for book in books %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.title }}</h5>
+                        <p class="card-text">author:{{ book.author }}</p>
+                        <p class="card-text">year: {{ book.year }}</p>
+                        <p class="card-text">ID: {{ book.id }}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
